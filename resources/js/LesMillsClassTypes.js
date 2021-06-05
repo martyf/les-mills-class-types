@@ -1,6 +1,3 @@
-const {core: commands} = Statamic.$bard.tiptap;
-const {markInputRule} = commands;
-
 export default class LesMillsClassTypes {
     name() {
         return "lesMillsClassType";
@@ -14,7 +11,9 @@ export default class LesMillsClassTypes {
             parseDOM: [
                 {
                     tag: "span.les-mills-class",
-                    getAttrs: (value) => ({key: value}),
+                    getAttrs: (dom) => ({
+                        key: dom.getAttribute('data-class')
+                    })
                 }
             ],
             toDOM: (mark) => [
@@ -28,12 +27,14 @@ export default class LesMillsClassTypes {
         };
     }
 
-    commands({type, updateMark}) {
-        return (attrs) => updateMark(type, attrs);
-    }
+    commands({type, updateMark, removeMark}) {
+        return attrs => {
+            if (attrs.key) {
+                return updateMark(type, attrs)
+            }
 
-    inputRules({type}) {
-        return [];
+            return removeMark(type)
+        }
     }
 
     pasteRules({type}) {

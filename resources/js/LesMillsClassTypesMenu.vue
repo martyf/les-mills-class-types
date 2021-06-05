@@ -2,13 +2,14 @@
     <div class="class-type-wrapper">
         <button
             class="bard-toolbar-button"
-            :class="{ 'active': showOptions }"
+            :class="{ 'active': currentKey || showOptions }"
             v-html="button.html"
             v-tooltip="button.text"
             @click="showOptions = !showOptions"
         ></button>
         <div class="class-type-container" v-if="showOptions" v-click-outside="closeClassTypeMenu">
-            <button v-for="(type, key) in classTypes" class="class-type-button" @click="setClassType(key)">
+            <button v-for="(type, key) in classTypes" class="class-type-button" @click="setClassType(key)"
+                    :class="{ 'active' : key == currentKey }">
                 <span class="class-type-mark" :style="'background-color: ' + type.colour"></span>
                 <span class="class-type-label">{{ type.name }}</span>
             </button>
@@ -51,6 +52,9 @@ export default {
                     colour: '#777777'
                 }
             };
+        },
+        currentKey() {
+            return this.editor.getMarkAttrs('lesMillsClassType').key;
         }
     },
     data() {
@@ -66,7 +70,7 @@ export default {
         setClassType(classTypeKey) {
             // update the editor
             this.editor.commands.lesMillsClassType({
-                key: classTypeKey
+                key: classTypeKey == this.currentKey ? false : classTypeKey
             })
 
             // hide the menu
@@ -86,6 +90,10 @@ export default {
 
 .class-type-button {
     @apply text-left px-3 py-2 w-full hover:bg-gray-100 flex items-center;
+}
+
+.class-type-button.active {
+    @apply bg-gray-200;
 }
 
 .class-type-label {
