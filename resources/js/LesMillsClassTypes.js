@@ -33,7 +33,7 @@ export default class LesMillsClassTypes {
     }
 
     inputRules({type}) {
-        return [markInputRule(/(?:\*\*|__)([^*_]+)(?:\*\*|__)$/, type)];
+        return [];
     }
 
     pasteRules({type}) {
