@@ -39,6 +39,10 @@ export default {
                     name: 'BodyPump',
                     colour: '#ea4851'
                 },
+                'bodyvive': {
+                    name: 'BodyVive',
+                    colour: '#752f8b'
+                },
                 'cxworx': {
                     name: 'CXWORX',
                     colour: '#e75204'
