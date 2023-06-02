@@ -19,9 +19,8 @@ class ServiceProvider extends AddonServiceProvider
         __DIR__.'/../dist/css/fonts' => 'css/fonts'
     ];
 
-    public function boot()
+    public function bootAddon()
     {
-        parent::boot();
-        Augmentor::addMark(LesMillsClassType::class);
+        Augmentor::addExtension('lesMillsClassType', new LesMillsClassType());
     }
 }

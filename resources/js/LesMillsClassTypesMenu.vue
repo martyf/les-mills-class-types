@@ -1,5 +1,5 @@
 <template>
-    <div class="class-type-wrapper">
+    <div class="inline-block relative">
         <button
             class="bard-toolbar-button"
             :class="{ 'active': currentKey || showOptions }"
@@ -7,11 +7,14 @@
             v-tooltip="button.text"
             @click="showOptions = !showOptions"
         ></button>
-        <div class="class-type-container" v-if="showOptions" v-click-outside="closeClassTypeMenu">
-            <button v-for="(type, key) in classTypes" class="class-type-button" @click="setClassType(key)"
-                    :class="{ 'active' : key == currentKey }">
-                <span class="class-type-mark" :style="'background-color: ' + type.colour"></span>
-                <span class="class-type-label">{{ type.name }}</span>
+        <div class="absolute bg-white border border-gray-300 rounded-sm z-10 divide-y divide-gray-100 shadow-lg"
+             v-if="showOptions" v-click-outside="closeClassTypeMenu">
+            <button v-for="(type, key) in classTypes" 
+                    class="text-left px-3 py-2 w-full hover:bg-gray-100 flex items-center" 
+                    @click="setClassType(key)"
+                    :class="{ 'bg-gray-200' : key == currentKey }">
+                <span class="block w-4 h-4 mr-3 flex-none" :style="'background-color: ' + type.colour"></span>
+                <span class="block text-left whitespace-nowrap">{{ type.name }}</span>
             </button>
         </div>
     </div>
@@ -58,6 +61,7 @@ export default {
             };
         },
         currentKey() {
+            return '';
             return this.editor.getMarkAttrs('lesMillsClassType').key;
         }
     },
@@ -73,7 +77,7 @@ export default {
         },
         setClassType(classTypeKey) {
             // update the editor
-            this.editor.commands.lesMillsClassType({
+            this.editor.commands.setClassType({
                 key: classTypeKey == this.currentKey ? false : classTypeKey
             })
 
@@ -83,28 +87,3 @@ export default {
     }
 };
 </script>
-<style lang="postcss">
-.class-type-wrapper {
-    @apply inline-block relative;
-}
-
-.class-type-container {
-    @apply absolute bg-white border border-gray-300 rounded-sm z-10 divide-y divide-gray-100 shadow-lg;
-}
-
-.class-type-button {
-    @apply text-left px-3 py-2 w-full hover:bg-gray-100 flex items-center;
-}
-
-.class-type-button.active {
-    @apply bg-gray-200;
-}
-
-.class-type-label {
-    @apply block text-left whitespace-nowrap;
-}
-
-.class-type-mark {
-    @apply block w-4 h-4 mr-3 flex-none;
-}
-</style>
