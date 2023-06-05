@@ -6,8 +6,6 @@ Statamic.$bard.buttons((buttons, button) => {
     return button({
         name: 'lesmillsclass',
         text: 'Les Mills Class Type',
-        //command: (editor) => editor.chain().focus().setClassType().run(),
-        command: 'setClassType',
         args: {
             key: ""
         },
@@ -15,15 +13,3 @@ Statamic.$bard.buttons((buttons, button) => {
         component: LesMillsClassTypesMenu
     });
 });
-/*Statamic.$bard.buttons(() => {
-    return {
-        name: 'lesmillsclass',
-        text: 'Les Mills Class Type',
-        command: 'classType',
-        args: {
-            key: ""
-        },
-        icon: 'les-mills',
-        component: LesMillsClassTypesMenu
-    };
-});*/

@@ -60,9 +60,10 @@ export default {
                 }
             };
         },
+
         currentKey() {
-            return '';
-            return this.editor.getMarkAttrs('lesMillsClassType').key;
+            // get the lesMillsClassType attribute
+            return this.editor.getAttributes('lesMillsClassType').key;
         }
     },
     data() {
@@ -78,7 +79,7 @@ export default {
         setClassType(classTypeKey) {
             // update the editor
             this.editor.commands.setClassType({
-                key: classTypeKey == this.currentKey ? false : classTypeKey
+                key: classTypeKey === this.currentKey ? false : classTypeKey
             })
 
             // hide the menu

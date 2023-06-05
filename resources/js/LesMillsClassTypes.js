@@ -37,13 +37,7 @@ export const LesMillsClassTypes = Mark.create({
     addCommands() {
         return {
             setClassType: (attributes) => ({ commands }) => {
-                console.log(attributes);
                 return commands.toggleMark(this.name, attributes);
-                if (attrs.key) {
-                    return commands.updateAttributes(this.type, attrs)
-                }
-
-                return commands.unsetMark(type)
             }
         }
     },
