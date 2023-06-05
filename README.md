@@ -5,7 +5,7 @@
 This is an example Bard addon for Statamic 4 that adds a span with a class to selected content. In this example, you can
 select from a number of Les Mills group fitness classes.
 
-You can use 1.x for Statamic 3.
+**This addon has been updated for Statamic 4**. It will no longer work on Statamic 3.x. However, you can use [1.x](https://github.com/martyf/les-mills-class-types/releases/tag/1.2) for Statamic 3.
 
 While this has a personal purpose for my own use, it also shows a simple working example of how to wrap selected content
 with an element, and add a class. Something that does have many use cases beyond something as trivial as this example.
