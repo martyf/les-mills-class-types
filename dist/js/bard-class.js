@@ -153,13 +153,11 @@
             computed: {
                 classTypes: function () {
                     return {
-                        bodyattack: {name: "BodyAttack", colour: "#FCC500"},
-                        bodybalance: {name: "BodyBalance", colour: "#b9d47d"},
-                        bodypump: {name: "BodyPump", colour: "#ea4851"},
-                        bodyvive: {name: "BodyVive", colour: "#752f8b"},
-                        cxworx: {name: "CXWORX", colour: "#e75204"},
-                        "les-mills-core": {name: "Les Mills Core", colour: "#444444"},
-                        "les-mills-tone": {name: "Les Mills Tone", colour: "#777777"}
+                        warning: {name: "Upozornění", colour: "#f91925"},
+                        done: {name: "Hotové", colour: "#27d508"},
+                        important: {name: "Důležité", colour: "#752f8b"},
+                        mute: {name: "mute", colour: "#777777"},
+                        interesting: {name: "Zajímavé", colour: "#ff7d0a"}
                     }
                 }, currentKey: function () {
                     return this.editor.getAttributes("bardClass").key

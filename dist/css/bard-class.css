@@ -4,22 +4,22 @@
     font-weight: bold;
 }
 
-.bard-class.bodyattack {
-    color: #FCC500;
+.bard-class.warning {
+    color: #f91925;
 }
 
-.bard-class.bodybalance {
-    color: #b9d47d;
+.bard-class.done {
+    color: #27d508;
 }
 
-.bard-class.bodypump {
-    color: #ea4851;
-}
-
-.bard-class.bodyvive {
+.bard-class.important {
     color: #752f8b;
 }
 
-.bard-class.cxworx {
-    color: #ED7402;
+.bard-class.mute {
+    color: #777777;
+}
+
+.bard-class.interesting {
+    color: #ff7d0a;
 }
