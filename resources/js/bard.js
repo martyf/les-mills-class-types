@@ -5,7 +5,7 @@ Statamic.$bard.addExtension(() => LesMillsClassTypes);
 Statamic.$bard.buttons((buttons, button) => {
     return button({
         name: 'lesmillsclass',
-        text: 'Les Mills Class Type',
+        text: 'Hokus Pokus 1',
         args: {
             key: ""
         },
