@@ -153,10 +153,10 @@
             computed: {
                 classTypes: function () {
                     return {
-                        warning: {name: "Upozornění", colour: "#f91925"},
-                        done: {name: "Hotové", colour: "#27d508"},
+                        warning: {name: "Pozor", colour: "#f91925"},
+                        done: {name: "Vyřešeno", colour: "#27d508"},
                         important: {name: "Důležité", colour: "#752f8b"},
-                        mute: {name: "mute", colour: "#777777"},
+                        mute: {name: "Potlačeno", colour: "#777777"},
                         interesting: {name: "Zajímavé", colour: "#ff7d0a"}
                     }
                 }, currentKey: function () {
