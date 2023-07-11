@@ -8,11 +8,11 @@ use Statamic\Providers\AddonServiceProvider;
 class ServiceProvider extends AddonServiceProvider
 {
     protected $scripts = [
-        __DIR__.'/../dist/js/les-mills-class-types.js',
+        __DIR__.'/../dist/js/bard-class.js',
     ];
 
     protected $stylesheets = [
-        __DIR__.'/../dist/css/les-mills-class-types.css'
+        __DIR__.'/../dist/css/bard-class.css'
     ];
 
     public function bootAddon()
