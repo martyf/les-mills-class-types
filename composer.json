@@ -1,6 +1,6 @@
 {
-    "name": "martyfriedel/les-mills-class-types",
-    "description": "A custom button for Bard in Statamic 4 to allow a span with a class to be added to selected text. In this instance, Les Mills group fitness class types.",
+    "name": "marvelousmartin/statamic-bard-class",
+    "description": "A custom button for Bard in Statamic 4 to allow a span with a class to be added to selected text.",
     "type": "statamic-addon",
     "keywords": [
         "statamic",
@@ -8,13 +8,16 @@
     ],
     "autoload": {
         "psr-4": {
-            "MartyFriedel\\LesMillsClassTypes\\": "src"
+            "MarvelousMartin\\StatamicBardClass\\": "src"
         }
     },
     "license": "MIT",
     "authors": [
         {
             "name": "Marty Friedel"
+        },
+        {
+            "name": "Martin Dub"
         }
     ],
     "require": {
@@ -22,12 +25,12 @@
     },
     "extra": {
         "statamic": {
-            "name": "Les Mills Class Types",
-            "description": "Les Mills Class Types addon for Bard in Statamic 4"
+            "name": "DEK Statamic",
+            "description": "Bard Class for DEK Company"
         },
         "laravel": {
             "providers": [
-                "MartyFriedel\\LesMillsClassTypes\\ServiceProvider"
+                "MarvelousMartin\\StatamicBardClass\\ServiceProvider"
             ]
         }
     }
