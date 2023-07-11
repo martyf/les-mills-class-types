@@ -27,11 +27,6 @@
         "statamic": {
             "name": "DEK Statamic",
             "description": "Bard Class for DEK Company"
-        },
-        "laravel": {
-            "providers": [
-                "MarvelousMartin\\StatamicBardClass\\ServiceProvider"
-            ]
         }
     }
 }
