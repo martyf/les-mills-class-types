@@ -1,5 +1,5 @@
 {
-    "name": "marvelousmartin/statamic-bard-class",
+    "name": "martinoak/statamic-bard-class",
     "description": "A custom button for Bard in Statamic 4 to allow a span with a class to be added to selected text.",
     "type": "statamic-addon",
     "keywords": [

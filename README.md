@@ -18,7 +18,7 @@ addon for Bard in Statamic 4.
 Install it via the composer command
 
 ```
-composer require martyfriedel/les-mills-class-types
+composer require marvelousmartin/statamic-bard-class
 ```
 
 In your Bard editor instances (note, *not* the configuration view), you'll see the new button added.

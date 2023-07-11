@@ -1,11 +1,11 @@
 <?php
 
-namespace MartyFriedel\LesMillsClassTypes;
+namespace MarvelousMartin\StatamicBardClass;
 
 use Tiptap\Core\Mark; 
 use Tiptap\Utils\HTML; 
 
-class LesMillsClassType extends Mark
+class StatamicBardClass extends Mark
 {
     public static $name = 'lesMillsClassType';
 

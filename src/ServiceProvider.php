@@ -1,6 +1,6 @@
 <?php
 
-namespace MartyFriedel\LesMillsClassTypes;
+namespace MarvelousMartin\StatamicBardClass;
 
 use Statamic\Fieldtypes\Bard\Augmentor;
 use Statamic\Providers\AddonServiceProvider;
@@ -17,6 +17,6 @@ class ServiceProvider extends AddonServiceProvider
 
     public function bootAddon()
     {
-        Augmentor::addExtension('lesMillsClassType', new LesMillsClassType());
+        Augmentor::addExtension('lesMillsClassType', new StatamicBardClass());
     }
 }
