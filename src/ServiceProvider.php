@@ -17,6 +17,6 @@ class ServiceProvider extends AddonServiceProvider
 
     public function bootAddon()
     {
-        Augmentor::addExtension('lesMillsClassType', new StatamicBardClass());
+        Augmentor::addExtension('bardClass', new StatamicBardClass());
     }
 }

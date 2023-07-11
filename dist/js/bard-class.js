@@ -103,17 +103,17 @@
     }, n.o = (e, t) => Object.prototype.hasOwnProperty.call(e, t), (() => {
         "use strict";
         var e = Statamic.$bard.tiptap.core, t = e.Mark, r = e.mergeAttributes, o = t.create({
-            name: "lesMillsClassType", addAttributes: function () {
+            name: "bardClass", addAttributes: function () {
                 return {key: {default: ""}}
             }, parseHTML: function () {
                 return [{
-                    tag: "span.les-mills-class", getAttrs: function (e) {
+                    tag: "span.bard-class", getAttrs: function (e) {
                         return {key: e.getAttribute("data-class")}
                     }
                 }]
             }, renderHTML: function (e) {
                 var t = e.mark, n = e.HTMLAttributes;
-                return ["span", r(n, {class: "les-mills-class " + t.attrs.key, "data-class": t.attrs.key}), 0]
+                return ["span", r(n, {class: "bard-class " + t.attrs.key, "data-class": t.attrs.key}), 0]
             }, addCommands: function () {
                 var e = this;
                 return {
@@ -162,7 +162,7 @@
                         "les-mills-tone": {name: "Les Mills Tone", colour: "#777777"}
                     }
                 }, currentKey: function () {
-                    return this.editor.getAttributes("lesMillsClassType").key
+                    return this.editor.getAttributes("bardClass").key
                 }
             },
             data: function () {
@@ -220,8 +220,8 @@
             return o
         })), Statamic.$bard.buttons((function (e, t) {
             return t({
-                name: "lesmillsclass",
-                text: "Hokus Pokus 2",
+                name: "bard-class-button",
+                text: "Zvýraznit text",
                 args: {key: ""},
                 html: '<svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 576 512" fill="currentColor"><path d="M339.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L568.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S517.7-4.4 499.1 9.6L262.4 187.2c-24 18-38.2 46.1-38.4 76.1L339.3 367.1zm-19.6 25.4l-116-104.4C143.9 290.3 96 339.6 96 400c0 3.9 .2 7.8 .6 11.6C98.4 429.1 86.4 448 68.8 448H64c-17.7 0-32 14.3-32 32s14.3 32 32 32H208c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg>',
                 component: i

@@ -7,14 +7,14 @@ use Tiptap\Utils\HTML;
 
 class StatamicBardClass extends Mark
 {
-    public static $name = 'lesMillsClassType';
+    public static $name = 'bardClass';
 
     public function renderHTML($mark, $attributes = [])
     {
         return [
             'span', 
             HTML::mergeAttributes([
-                'class' => 'les-mills-class '.$mark->attrs->key
+                'class' => 'bard-class '.$mark->attrs->key
             ], $attributes),
             0 
         ];
