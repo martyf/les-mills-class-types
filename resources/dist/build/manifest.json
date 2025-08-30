@@ -1,0 +1,19 @@
+{
+  "resources/css/les-mills-class-types.css": {
+    "file": "assets/les-mills-class-types-Di_dcGh5.css",
+    "src": "resources/css/les-mills-class-types.css",
+    "isEntry": true,
+    "names": [
+      "les-mills-class-types.css"
+    ]
+  },
+  "resources/js/cp.js": {
+    "file": "assets/cp-CPPHXyNn.js",
+    "name": "cp",
+    "src": "resources/js/cp.js",
+    "isEntry": true,
+    "css": [
+      "assets/cp-T1G-TTek.css"
+    ]
+  }
+}

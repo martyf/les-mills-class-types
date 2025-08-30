@@ -1,12 +1,15 @@
-# Bard add-on for Statamic 4 and 5 for adding a span and class to selected content
+# Bard add-on for Statamic 6 for adding a span and class to selected content
 
-![Statamic 4.0+](https://img.shields.io/badge/Statamic-4.0+-FF269E?style=for-the-badge&link=https://statamic.com)
-![Statamic 5.0+](https://img.shields.io/badge/Statamic-5.0+-FF269E?style=for-the-badge&link=https://statamic.com)
+![Statamic 6.0+](https://img.shields.io/badge/Statamic-6.0+-FF269E?style=for-the-badge&link=https://statamic.com)
 
-This is an example Bard addon for Statamic 4 and 5 that adds a span with a class to selected content. In this example, you can
+This is an example Bard addon for Statamic 6 that adds a span with a class to selected content. In this example, you can
 select from a number of Les Mills group fitness classes.
 
-**This addon has been updated for Statamic 4 and 5**. It will no longer work on Statamic 3.x. However, you can use [1.x](https://github.com/martyf/les-mills-class-types/releases/tag/1.2) for Statamic 3.
+**This addon has been updated for Statamic 6**. 
+
+It will no longer work on Statamic 3, 4 or 5. However,  
+- for Statamic 3, use [1.x](https://github.com/martyf/les-mills-class-types/releases/tag/1.2) 
+- for Statamic 4 or 5, use [2.x](https://github.com/martyf/les-mills-class-types/tree/2.x)
 
 While this has a personal purpose for my own use, it also shows a simple working example of how to wrap selected content
 with an element, and add a class. Something that does have many use cases beyond something as trivial as this example.
